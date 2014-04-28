@@ -1,8 +1,8 @@
-package commands;
+package com.bionic.bardakov.web.commands;
 
-import config.ConfigurationManager;
-import dao.daofactory.MySQLDAOFactory;
-import messages.MessageManager;
+import com.bionic.bardakov.web.config.ConfigurationManager;
+import com.bionic.bardakov.web.dao.daofactory.MySQLDAOFactory;
+import com.bionic.bardakov.web.messages.MessageManager;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -13,9 +13,9 @@ import java.io.IOException;
 /**
  * User: ${Bogdan}
  * Date: 20.04.14
- * Time: 19:21
+ * Time: 13:27
  */
-public class GoToMakePayment implements ActionCommand {
+public class GoToAccountUpdateCommand implements ActionCommand {
     String page;
     private static final String PARAM_NAME_ACCOUNT_NUMBER ="accountNumber";
 
@@ -29,7 +29,8 @@ public class GoToMakePayment implements ActionCommand {
             if (status.equals("lock")){
                 page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.LOCK_PATH);
             }else{
-                page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.MAKE_PAYMENT_PAGE_PATH);
+                page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.UPDATE_ACCOUNT_PAGE_PATH);
+
             }
         } catch (Exception e) {
             request.setAttribute("errorMessage", MessageManager.getInstance(local).getProperty(MessageManager.UPDATE_ACCOUNT_ERROR_MESSAGE));

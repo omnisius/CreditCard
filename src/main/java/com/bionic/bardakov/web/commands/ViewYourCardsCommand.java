@@ -1,14 +1,11 @@
-package commands;
+package com.bionic.bardakov.web.commands;
 
-import config.ConfigurationManager;
-import dao.daofactory.MySQLDAOFactory;
-import dao.mydao.MyDAOaccount;
-import dao.mydao.MyDAOcard;
-import dao.mydao.MyDAOuser;
-import entities.Card;
-import messages.MessageManager;
-import session.SessionLogic;
-
+import com.bionic.bardakov.web.config.ConfigurationManager;
+import com.bionic.bardakov.web.dao.daofactory.MySQLDAOFactory;
+import com.bionic.bardakov.web.dao.mydao.MyDAOcard;
+import com.bionic.bardakov.web.dao.mydao.MyDAOuser;
+import com.bionic.bardakov.web.entities.Card;
+import com.bionic.bardakov.web.messages.MessageManager;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
@@ -45,6 +42,7 @@ public class ViewYourCardsCommand implements ActionCommand {
                     cardNum.add(cardNumber);
                     request.setAttribute("cardNum", cardNum);
                     request.setAttribute("size", cardNum.size());
+                    request.setAttribute("page", "CARD_VIEW_PAGE_PATH");
                 }
                 page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.CARD_VIEW_PAGE_PATH);
             } else {

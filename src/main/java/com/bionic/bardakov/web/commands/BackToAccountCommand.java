@@ -1,7 +1,7 @@
-package commands;
+package com.bionic.bardakov.web.commands;
 
-import config.ConfigurationManager;
-import dao.daofactory.MySQLDAOFactory;
+import com.bionic.bardakov.web.config.ConfigurationManager;
+import com.bionic.bardakov.web.dao.daofactory.MySQLDAOFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;

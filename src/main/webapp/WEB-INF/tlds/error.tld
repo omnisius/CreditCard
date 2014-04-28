@@ -5,7 +5,7 @@
     <uri>/WEB-INF/tlds/error</uri>
     <tag>
         <name>error</name>
-        <tag-class>tag.ErrorTagHandler</tag-class>
+        <tag-class>com.bionic.bardakov.web.tag.ErrorTagHandler</tag-class>
         <body-content>empty</body-content>
         </tag>
 </taglib>

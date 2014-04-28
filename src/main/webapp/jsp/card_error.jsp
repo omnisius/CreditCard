@@ -14,13 +14,13 @@
     <title>Account Error</title>
 </head>
 <fmt:setLocale value="${local}" scope="session"/>
-<fmt:setBundle basename="messages.messages"/>
+<fmt:setBundle basename="com.bionic.bardakov.web.messages.messages"/>
 <body style="background: #ff562d">
 <h3><fmt:message key="ERROR"/></h3>
 <hr/>
 <errortag:error/>
 <hr/>
-<form action="controller" >
+<form action="com.bionic.bardakov.web.controller" >
     <input type = "hidden" name = "command" value = "get new card"/>
     <input type="submit" value="<fmt:message key="GET_CARD"/>"/>
 </form>

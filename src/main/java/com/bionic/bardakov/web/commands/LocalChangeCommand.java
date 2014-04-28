@@ -1,6 +1,6 @@
-package commands;
+package com.bionic.bardakov.web.commands;
 
-import config.PageManager;
+import com.bionic.bardakov.web.config.PageManager;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -22,9 +22,10 @@ public class LocalChangeCommand implements ActionCommand {
         String path = request.getParameter(PARAM_NAME_PAGE);
         System.out.println(path);
 
+        request.setAttribute("page", path);
         HttpSession session = request.getSession();
         session.setAttribute("local", local);
-
+        request.setAttribute("local", local);
 
         return page = PageManager.getInstance().getProperty(path);
     }
