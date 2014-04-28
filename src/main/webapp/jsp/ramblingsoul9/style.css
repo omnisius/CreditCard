@@ -8,7 +8,16 @@ body {
 	font-size: 12px;
 	background-attachment: fixed;
 }
-
+#wrap {
+	background-image: url(images/pagebg.png);
+	background-repeat: repeat-y;
+	width: 782px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	padding: 0px;
+}
 #wrap #header {
 	background-image: url(images/header.png);
 	background-repeat: no-repeat;
@@ -117,6 +126,18 @@ body {
 	border-bottom-style: dashed;
 	border-bottom-color: #CC6600;
 }
+#wrap #contents #sidebar ul {
+	margin: 0px;
+	list-style-type: none;
+	display: block;
+	background-image: url(images/sidemenuhvr.png);
+	background-position: bottom;
+	background-repeat: no-repeat;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 15px;
+	padding-left: 0px;
+}
 #wrap #contents #sidebar li {
 	height: 22px;
 	display: block;
@@ -132,10 +153,27 @@ body {
 	border-bottom-style: solid;
 	border-bottom-color: #FBF5EB;
 }
-
+#wrap #contents #sidebar h2 {
+	font-size: 16px;
+	padding: 5px;
+	display: block;
+	background-image: url(images/sidemenuhvr.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	text-transform: uppercase;
+	color: #993300;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+}
 #wrap #contents .clear {
 	clear: both;
 }
+
+
+
 
 #wrap #contents #left .postheading .cal .month {
 	font-size: 9px;
@@ -151,6 +189,15 @@ body {
 #wrap #contents #left .postheading h1 a {
 	color: #B7412C;
 	text-decoration: none;
+}
+#wrap #contents #left .postheading .cal {
+	background-image: url(images/datecal.png);
+	background-repeat: no-repeat;
+	height: 71px;
+	width: 69px;
+	display: block;
+	float: left;
+	padding: 10px;
 }
 
 #wrap #contents {
@@ -181,20 +228,39 @@ body {
 #wrap #contents #left p {
 	line-height: 20px;
 }
-
+#wrap #header #topnav a:visited,active {
+	color: #CC6600;
+	text-decoration: none;
+	font-weight: bold;
+}
 #wrap #header #topnav a:hover {
 
 	color: #F3E3C8;
 	text-decoration: none;
 	font-weight: bold;
 }
+#wrap #contents #left .postheading h1 a:visited,active {
 
+	color: #B7412C;
+	text-decoration: none;
+}
 #wrap #contents #left .postheading h1 a:hover {
 	color: #000000;
 	text-decoration: none;
 	background-color: #F8F0E2;
 }
-
+#wrap #contents #left .postbottom {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 15px;
+	margin-left: 0px;
+	background-image: url(images/postinfobg.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	height: 45px;
+	padding-top: 25px;
+	text-align: center;
+}
 #wrap #contents #left h2 {
 	font-size: 18px;
 	color: #996633;
@@ -260,6 +326,23 @@ body {
 }
 #footer span {
 	margin-left:35px;
+}
+#footer {
+	background-image: url(images/footerbg.png);
+	height: 40px;
+	padding-top: 30px;
+	background-position: 0px 0px;
+	float: none;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	color: #F3E3C8;
+	font-size: 10px;
+	width: 782px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
 }
 
 

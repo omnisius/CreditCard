@@ -22,11 +22,11 @@
     <form style="color: white" WIDTH="50%" name="cardsForm" method="POST" action="com.bionic.bardakov.web.controller" >
         <mytag:body size="${size}">
             <c:forEach var="cardNumber" items="${cardNum}">
-                <input type="radio" name="cardNumber" value="${cardNumber}">${cardNumber}<br/>
+                <input type="radio" name="cardNumber" checked value="${cardNumber}">${cardNumber}<br/>
            </c:forEach>
             <input style="color: rgba(80, 23, 255, 0.03)" type="submit" name = "command" value="to account" >
         </mytag:body>
-        <form action="controller" >
+        <form action="com.bionic.bardakov.web.controller" >
             <input type = "hidden" name = "command" value = "back to main"/>
             <input type="submit" value="<fmt:message key="BACK"/>"/>
         </form>

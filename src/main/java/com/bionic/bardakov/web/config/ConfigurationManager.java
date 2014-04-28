@@ -37,7 +37,7 @@ public class ConfigurationManager {
     public static final String ADMIN_ACCOUNT_PAGE_PATH = "ADMIN_ACCOUNT_PAGE_PATH";
     public static final String LOGOUT_PAGE_PATH = "LOGOUT_PAGE_PATH";
     public static final String CARD_ERROR_PAGE_PATH = "CARD_ERROR_PAGE_PATH";
-
+    public static final String REGISTR_ERROR_PAGE_PATH = "REGISTR_ERROR_PAGE_PATH";
     public static ConfigurationManager getInstance(){
         if (instance == null){
             instance = new ConfigurationManager();

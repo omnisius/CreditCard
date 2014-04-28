@@ -43,7 +43,7 @@ public class NewUserAddCommand implements ActionCommand {
             page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.MAIN_PAGE_PATH);
         } catch (Exception ex) {
             request.setAttribute("errorMessage", MessageManager.getInstance((String) local).getProperty(MessageManager.USER_ADD_ERROR_MESSAGE));
-            page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.ERROR_PAGE_PATH);
+            page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.REGISTR_ERROR_PAGE_PATH);
         }
         return page;
     }

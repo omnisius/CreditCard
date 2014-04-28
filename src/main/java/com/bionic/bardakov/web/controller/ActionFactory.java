@@ -40,7 +40,6 @@ class ActionFactory {
         commands.put("go to unlock account", new GoToAccountUnlockCommand());
         commands.put("local", new LocalChangeCommand());
         commands.put("back to main", new BackToMainCommand());
-
     }
 
     public ActionCommand getCommand(HttpServletRequest request) {

@@ -22,7 +22,7 @@
 <form style = "color:white" name="accountUnlockForm" method="POST" action="com.bionic.bardakov.web.controller" >
     <mytag:body size="${size}">
         <c:forEach var="userAccountNumber" items="${accountNum}">
-           <input type="radio" name="userAccountNumber" value="${userAccountNumber}">${userAccountNumber}<br/>
+           <input type="radio" name="userAccountNumber" checked value="${userAccountNumber}">${userAccountNumber}<br/>
         </c:forEach>
         <input style="color: rgba(100, 255, 20, 0.04)" type="submit" name = "command" value="unlock account">
     </mytag:body>
