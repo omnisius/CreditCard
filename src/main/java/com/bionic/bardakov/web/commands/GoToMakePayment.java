@@ -26,6 +26,7 @@ public class GoToMakePayment implements ActionCommand {
         String local= (String) session.getAttribute("local");
         try {
             String status= MySQLDAOFactory.getMyDAOaccount().findWhereAccountNumberEquals(accountNumber).getStatus();
+            //Check account lock or not to redirect on different pages
             if (status.equals("lock")){
                 page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.LOCK_PATH);
             }else{

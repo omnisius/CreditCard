@@ -17,20 +17,20 @@ import java.io.IOException;
  */
 public class GoToAccountUpdateCommand implements ActionCommand {
     String page;
-    private static final String PARAM_NAME_ACCOUNT_NUMBER ="accountNumber";
+    private static final String PARAM_NAME_ACCOUNT_NUMBER = "accountNumber";
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         long accountNumber = Long.parseLong((String) request.getSession().getAttribute(PARAM_NAME_ACCOUNT_NUMBER));
         HttpSession session = request.getSession();
-        String local= (String) session.getAttribute("local");
+        String local = (String) session.getAttribute("local");
         try {
-            String status= MySQLDAOFactory.getMyDAOaccount().findWhereAccountNumberEquals(accountNumber).getStatus();
-            if (status.equals("lock")){
+            String status = MySQLDAOFactory.getMyDAOaccount().findWhereAccountNumberEquals(accountNumber).getStatus();
+            //Check account lock or not to redirect on different pages
+            if (status.equals("lock")) {
                 page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.LOCK_PATH);
-            }else{
+            } else {
                 page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.UPDATE_ACCOUNT_PAGE_PATH);
-
             }
         } catch (Exception e) {
             request.setAttribute("errorMessage", MessageManager.getInstance(local).getProperty(MessageManager.UPDATE_ACCOUNT_ERROR_MESSAGE));

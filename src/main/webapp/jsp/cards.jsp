@@ -13,7 +13,7 @@
 <!DOCTYPE html>
 <html>
 <link href="jsp/ramblingsoul9/style.css" rel="stylesheet" type="text/css"/>
-<head>CARDS LIST:</head>
+<head><title>CARDS LIST</title></head>
 <body>
 <fmt:setLocale value="${local}" scope="session"/>
 <fmt:setBundle basename="com.bionic.bardakov.web.messages.messages"/>

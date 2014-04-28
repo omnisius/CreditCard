@@ -18,8 +18,8 @@ public class NoCommand implements ActionCommand {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("page", "LOGIN_PAGE_PATH");
         HttpSession session = request.getSession();
-//        String local= (String) request.getAttribute("local");
-//        request.setAttribute("local", local);
+        String local= (String) request.getAttribute("local");
+        request.setAttribute("local", local);
 
         return ConfigurationManager.getInstance().getProperty(ConfigurationManager.LOGIN_PAGE_PATH);
 

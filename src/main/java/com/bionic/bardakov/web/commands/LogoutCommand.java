@@ -20,8 +20,7 @@ public class LogoutCommand implements ActionCommand {
         HttpSession session = request.getSession();
         String local = (String) session.getAttribute("local");
         request.setAttribute("local", local);
-       session.invalidate();
-
+        session.invalidate();
         return ConfigurationManager.getInstance().getProperty(ConfigurationManager.LOGOUT_PAGE_PATH);
     }
 }

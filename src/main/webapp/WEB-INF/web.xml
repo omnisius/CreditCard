@@ -33,22 +33,4 @@
         <filter-name>Charset Filter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-
-    <!--<com.bionic.bardakov.web.filter>-->
-        <!--<com.bionic.bardakov.web.filter-name>adminFilter</com.bionic.bardakov.web.filter-name>-->
-        <!--<com.bionic.bardakov.web.filter-class>com.bionic.bardakov.web.filter.AdminFilter</com.bionic.bardakov.web.filter-class>-->
-    <!--</com.bionic.bardakov.web.filter>-->
-    <!--<com.bionic.bardakov.web.filter-mapping>-->
-        <!--<com.bionic.bardakov.web.filter-name>adminFilter</com.bionic.bardakov.web.filter-name>-->
-        <!--<servlet-name>com.bionic.bardakov.web.controller</servlet-name>-->
-    <!--</com.bionic.bardakov.web.filter-mapping>-->
-
-    <!--<com.bionic.bardakov.web.filter>-->
-        <!--<com.bionic.bardakov.web.filter-name>lockFilter</com.bionic.bardakov.web.filter-name>-->
-        <!--<com.bionic.bardakov.web.filter-class>com.bionic.bardakov.web.filter.LockFilter</com.bionic.bardakov.web.filter-class>-->
-    <!--</com.bionic.bardakov.web.filter>-->
-    <!--<com.bionic.bardakov.web.filter-mapping>-->
-        <!--<com.bionic.bardakov.web.filter-name>lockFilter</com.bionic.bardakov.web.filter-name>-->
-        <!--<servlet-name>com.bionic.bardakov.web.controller</servlet-name>-->
-    <!--</com.bionic.bardakov.web.filter-mapping>-->
 </web-app>

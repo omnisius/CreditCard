@@ -15,7 +15,7 @@
 <link href="jsp/ramblingsoul9/style.css" rel="stylesheet" type="text/css"/>
 <fmt:setLocale value="${local}" scope="session"/>
 <fmt:setBundle basename="com.bionic.bardakov.web.messages.messages"/>
-<head/>
+<head><title>Unlock</title></head>
 <body>
 <strong style = "color:white" ><mytag:body><fmt:message key="SELECT_UNLOCK"/></mytag:body></strong>
 <br><br>

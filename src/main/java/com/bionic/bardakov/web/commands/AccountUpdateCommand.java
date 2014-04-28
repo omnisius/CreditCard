@@ -3,7 +3,6 @@ package com.bionic.bardakov.web.commands;
 import com.bionic.bardakov.web.config.ConfigurationManager;
 import com.bionic.bardakov.web.dao.daofactory.MySQLDAOFactory;
 import com.bionic.bardakov.web.dao.mydao.MyDAOaccount;
-import com.bionic.bardakov.web.entities.Account;
 import com.bionic.bardakov.web.messages.MessageManager;
 
 import javax.servlet.ServletException;
@@ -34,11 +33,11 @@ public class AccountUpdateCommand implements ActionCommand {
             String smth = MessageManager.getInstance(local).getProperty(MessageManager.UPDATE_THIS_ACCOUNT);
 
             MyDAOaccount myDAOaccount = MySQLDAOFactory.getMyDAOaccount();
-
-            if (!myDAOaccount.checkStatusIsNull(accountNumber)) {
+            //Check status of account
+            if (!myDAOaccount.checkStatusIsUnlock(accountNumber)) {
                 myDAOaccount.updateMoney(accountNumber, money);
                 request.setAttribute("smth", smth + " " + money + " UAH");
-
+                //Check user Admin or not to redirect on different pages
                 boolean isAdmin = MySQLDAOFactory.getMyDAOuser().isAdmin(login);
                 if (!isAdmin) {
                     page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.ACCOUNT_PAGE_PATH);

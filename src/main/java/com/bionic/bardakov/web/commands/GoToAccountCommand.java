@@ -19,7 +19,6 @@ public class GoToAccountCommand implements ActionCommand {
     private static final String PARAM_NAME_LOGIN = "login";
     Long accountNumber;
 
-
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
         String page;
@@ -27,8 +26,8 @@ public class GoToAccountCommand implements ActionCommand {
         Object local = session.getAttribute("local");
         if ((local == null)) local = "ru_RU";
         session.setAttribute("local", local);
-
         try {
+            //Move from cardNumer to accountNumber
             long cardNumber = Long.parseLong(request.getParameter(PARAM_NAME_CARD_NUMBER));
             String login = (String) request.getSession().getAttribute(PARAM_NAME_LOGIN);
 
@@ -37,7 +36,7 @@ public class GoToAccountCommand implements ActionCommand {
 
             session.setAttribute("accountNumber", accountNumber.toString());
             request.setAttribute("accountNumber", accountNumber);
-
+            //Check user Admin or not to redirect on different pages
             boolean isAdmin = MySQLDAOFactory.getMyDAOuser().isAdmin(login);
             if (!isAdmin) {
                 page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.ACCOUNT_PAGE_PATH);

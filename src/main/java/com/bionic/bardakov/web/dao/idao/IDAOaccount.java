@@ -10,7 +10,7 @@ import com.bionic.bardakov.web.entities.Account;
 public interface IDAOaccount {
     public void add(Account account);
     public void update(Account account);
-    boolean checkStatusIsNull(long accountNumber) throws Exception;
+    boolean checkStatusIsUnlock(long accountNumber) throws Exception;
     boolean compareMoney(long accountNumber, float moneySum) throws Exception;
     boolean isAcountNumberInDB(long accountNumber) throws Exception;
     public Account[] findWhereStatusEquals(String status) throws Exception;

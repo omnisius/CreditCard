@@ -11,8 +11,8 @@ import java.io.IOException;
  * Time: 13:51
  */
 public interface ActionCommand {
-            public String execute(HttpServletRequest request, HttpServletResponse response)
-                    throws ServletException,IOException;
-    }
+    public String execute(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException;
+}
 
 

@@ -11,7 +11,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
-    <title>Account Error</title>
+    <title>Card Error</title>
 </head>
 <fmt:setLocale value="${local}" scope="session"/>
 <fmt:setBundle basename="com.bionic.bardakov.web.messages.messages"/>

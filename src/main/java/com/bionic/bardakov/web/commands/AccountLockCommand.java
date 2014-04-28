@@ -26,12 +26,12 @@ public class AccountLockCommand implements ActionCommand {
         String local= (String) session.getAttribute("local");
         String login = (String) request.getSession().getAttribute(PARAM_NAME_LOGIN);
         long accountNumber = Long.parseLong((String) request.getSession().getAttribute(PARAM_NAME_ACCOUNT_NUMBER));
-
+        //Update status in table "account" to "lock"
         MySQLDAOFactory.getMyDAOaccount().updateStatus(accountNumber, "lock");
         request.setAttribute("accountNumber", accountNumber);
         String smth = MessageManager.getInstance(local).getProperty(MessageManager.LOCK_THIS_ACCOUNT);
         request.setAttribute("smth", smth );
-
+        //Check user Admin or not to redirect on different pages
         boolean isAdmin = MySQLDAOFactory.getMyDAOuser().isAdmin(login);
         if(!isAdmin) {
             page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.ACCOUNT_PAGE_PATH);

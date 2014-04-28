@@ -22,6 +22,7 @@ public class ConfigurationManager {
     public static final String MAIN_PAGE_PATH = "MAIN_PAGE_PATH";
     public static final String LOGIN_PAGE_PATH = "LOGIN_PAGE_PATH";
     public static final String CARD_VIEW_PAGE_PATH = "CARD_VIEW_PAGE_PATH";
+    public static final String INDEX_PAGE_PATH = "INDEX_PAGE_PATH";
 
     public static final String UNLOCK_ACCOUNT_PAGE_PATH = "UNLOCK_ACCOUNT_PAGE_PATH";
     public static final String UPDATE_ACCOUNT_PAGE_PATH = "UPDATE_ACCOUNT_PAGE_PATH";

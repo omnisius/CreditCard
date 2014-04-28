@@ -13,7 +13,7 @@
 <fmt:setLocale value="${local}" scope="session"/>
 <fmt:setBundle basename="com.bionic.bardakov.web.messages.messages"/>
 <head>
-    <title style="color: white">Make payment</title>
+    <title>Make payment</title>
 </head>
 <body>
 <h3 style="color: white"><fmt:message key="MONEY_PAY"/></h3>

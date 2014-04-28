@@ -49,13 +49,11 @@ public class PaymentMakeCommand implements ActionCommand {
             } else {
                 request.setAttribute("errorMessage", MessageManager.getInstance(local).getProperty(MessageManager.MAKE_PAYMENT_ERROR_MESSAGE));
                 page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.ACCOUNT_ERROR_PAGE_PATH);
-
             }
         } catch (Exception e) {
             request.setAttribute("errorMessage", MessageManager.getInstance(local).getProperty(MessageManager.MAKE_PAYMENT_ERROR_MESSAGE));
             page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.ACCOUNT_ERROR_PAGE_PATH);
         }
         return page;
-
     }
 }

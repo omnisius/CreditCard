@@ -34,7 +34,7 @@ public class Controller extends HttpServlet {
                                     throws ServletException, IOException {
         String page = null;
         HttpSession session = request.getSession();
-        String local= (String) session.getAttribute("local");
+        String local = (String) session.getAttribute("local");
 
         try {
             ActionCommand command = requestHelper.getCommand(request);
