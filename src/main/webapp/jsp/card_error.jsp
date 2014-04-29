@@ -20,7 +20,7 @@
 <hr/>
 <errortag:error/>
 <hr/>
-<form action="com.bionic.bardakov.web.controller" >
+<form action="process" >
     <input type = "hidden" name = "command" value = "get new card"/>
     <input type="submit" value="<fmt:message key="GET_CARD"/>"/>
 </form>

@@ -26,7 +26,7 @@ public class LoginCommand implements ActionCommand {
         String login = request.getParameter(PARAM_NAME_LOGIN);
         String password = request.getParameter(PARAM_NAME_PASSWORD);
 
-        HttpSession session = request.getSession();
+        HttpSession session = request.getSession(true);
         session.setAttribute("login", login);
         Object local = session.getAttribute("local");
         if ((local == null)) local = "ru_RU";
@@ -37,6 +37,7 @@ public class LoginCommand implements ActionCommand {
             request.setAttribute("local", local);
             String smth = MessageManager.getInstance((String) local).getProperty(MessageManager.WELCOME_MESSAGE);
             request.setAttribute("smth", " " + smth);
+            request.setAttribute("page", "MAIN_PAGE_PATH");
             page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.MAIN_PAGE_PATH);
         } else {
             request.setAttribute("errorMessage", MessageManager.getInstance((String) local).getProperty(MessageManager.LOGIN_ERROR_MESSAGE));

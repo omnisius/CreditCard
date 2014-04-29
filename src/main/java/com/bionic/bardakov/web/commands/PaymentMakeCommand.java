@@ -37,12 +37,14 @@ public class PaymentMakeCommand implements ActionCommand {
                 MySQLDAOFactory.getMyDAOpayment().update(payment);
                 MySQLDAOFactory.getMyDAOaccount().updateMoney(accountNumber, -moneySum);
 
-                request.setAttribute("smth", ", " + smth + " " + moneySum);
+                request.setAttribute("smth", smth + " " + moneySum);
 
                 boolean isAdmin = MySQLDAOFactory.getMyDAOuser().isAdmin(login);
                 if (!isAdmin) {
+                    request.setAttribute("page", "ACCOUNT_PAGE_PATH");
                     page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.ACCOUNT_PAGE_PATH);
                 } else {
+                    request.setAttribute("page", "ADMIN_ACCOUNT_PAGE_PATH");
                     page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.ADMIN_ACCOUNT_PAGE_PATH);
                 }
 

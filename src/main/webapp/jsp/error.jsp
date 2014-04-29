@@ -22,7 +22,7 @@ To change this template use File | Settings | File Templates.
 <hr/>
 <errortag:error/>
 <hr/>
-<a href="com.bionic.bardakov.web.controller"><fmt:message key="TO_LOGIN"/></a>
+<a href="process"><fmt:message key="TO_LOGIN"/></a>
 </body>
 </html>
 

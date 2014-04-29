@@ -10,7 +10,7 @@ To change this template use File | Settings | File Templates.
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
-<link href="jsp/ramblingsoul9/style.css" rel="stylesheet" type="text/css"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
 <head>
     <title>login</title>
 </head>
@@ -20,7 +20,7 @@ To change this template use File | Settings | File Templates.
 <%@ include file="local.jsp" %>
 <h2 align="center" style="color: white"><fmt:message key="LOGIN"/></h2>
 <h3>
-    <form align="center" style="color: white" name="loginForm" method="POST" action="com.bionic.bardakov.web.controller">
+    <form align="center" style="color: white" name="loginForm" method="POST" action="process">
         <input type="hidden" name="command" value="login">
         <fmt:message key="LOGIN"/>:<br/>
         <input type="text" name="login" value=""><br/>

@@ -9,7 +9,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<link href="jsp/ramblingsoul9/style.css" rel="stylesheet" type="text/css"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
 <fmt:setLocale value="${local}" scope="session"/>
 <fmt:setBundle basename="com.bionic.bardakov.web.messages.messages"/>
 <head>
@@ -18,9 +18,9 @@
 <body>
 <h3 style="color: white"><fmt:message key="MONEY_PAY"/></h3>
 <hr/>
-<form style="color: white" name="paymentForm" method="POST" action="com.bionic.bardakov.web.controller">
+<form style="color: white" name="paymentForm" method="POST" action="process">
     <input type="hidden" name="command" value="make payment">
-    <fmt:message key="MONEY"/>: <br/>
+    <fmt:message key="MONEY"/> <br/>
     <input type="text" name="moneySum" value=""><br/>
     <input type="submit" value="<fmt:message key="ENTER"/>">
 </form>

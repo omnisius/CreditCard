@@ -42,6 +42,7 @@ public class MessageManager {
     public static final String NEW_ACCOUNT_MESSAGE = "NEW_ACCOUNT_MESSAGE";
     public static final String NEW_PASSWORD_MESSAGE = "NEW_PASSWORD_MESSAGE";
     public static final String PAY_MESSAGE = "PAY_MESSAGE";
+    public static final String LOCAL_MESSAGE = "LOCAL_MESSAGE";
 
     public static MessageManager getInstance(String local){
         if (instance == null){

@@ -19,8 +19,12 @@
 <hr/>
 <fmt:message key="LOCK"/>
 <hr/>
-<form action="com.bionic.bardakov.web.controller" >
+<form action="process" >
     <input type = "hidden" name = "command" value = "show your cards"/>
+    <input type="submit" value="<fmt:message key="CARDS"/>"/>
+</form>
+<form action="process">
+    <input type="hidden" name="command" value="back to account"/>
     <input type="submit" value="<fmt:message key="BACK"/>"/>
 </form>
 </body>

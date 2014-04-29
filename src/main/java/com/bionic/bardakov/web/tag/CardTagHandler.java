@@ -18,7 +18,7 @@ public class CardTagHandler extends BodyTagSupport {
 
     public int doStartTag() throws JspTagException {
         try {
-            pageContext.getOut().write("<TABLE BORDER=\"2\" WIDTH=\"50%\" HEIGHT=\"100%\" >");
+            pageContext.getOut().write("<TABLE BORDER=\"2\" WIDTH=\"100%\" HEIGHT=\"100%\" >");
             pageContext.getOut().write("<TR><TD>");
         } catch (IOException ex) {
             throw new JspTagException(ex.getMessage());

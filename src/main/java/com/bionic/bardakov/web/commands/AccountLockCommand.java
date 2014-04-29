@@ -35,8 +35,10 @@ public class AccountLockCommand implements ActionCommand {
         boolean isAdmin = MySQLDAOFactory.getMyDAOuser().isAdmin(login);
         if(!isAdmin) {
             page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.ACCOUNT_PAGE_PATH);
+            request.setAttribute("page", "ACCOUNT_PAGE_PATH");
         } else{
             page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.ADMIN_ACCOUNT_PAGE_PATH);
+            request.setAttribute("page", "ADMIN_ACCOUNT_PAGE_PATH");
         }
         return page;
     }

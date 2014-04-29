@@ -7,7 +7,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>controller</servlet-name>
-        <url-pattern>/com.bionic.bardakov.web.controller</url-pattern>
+        <url-pattern>/process</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

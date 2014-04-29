@@ -39,7 +39,7 @@ public class NewUserAddCommand implements ActionCommand {
             MySQLDAOFactory.getMyDAOuser().add(user);
             request.setAttribute("user", login);
             request.setAttribute("smth", smth);
-
+            request.setAttribute("page", "MAIN_PAGE_PATH");
             page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.MAIN_PAGE_PATH);
         } catch (Exception ex) {
             request.setAttribute("errorMessage", MessageManager.getInstance((String) local).getProperty(MessageManager.USER_ADD_ERROR_MESSAGE));

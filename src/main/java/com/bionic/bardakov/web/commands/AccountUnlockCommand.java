@@ -30,6 +30,7 @@ public class AccountUnlockCommand implements ActionCommand {
         MySQLDAOFactory.getMyDAOaccount().updateStatus(userAccountNumber, "unlock");
         request.setAttribute("account", userAccountNumber);
         request.setAttribute("smth", smth);
+        request.setAttribute("page", "ADMIN_ACCOUNT_PAGE_PATH");
         return page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.ADMIN_ACCOUNT_PAGE_PATH);
     }
 }

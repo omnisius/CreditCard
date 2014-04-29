@@ -40,8 +40,10 @@ public class AccountUpdateCommand implements ActionCommand {
                 //Check user Admin or not to redirect on different pages
                 boolean isAdmin = MySQLDAOFactory.getMyDAOuser().isAdmin(login);
                 if (!isAdmin) {
+                    request.setAttribute("page", "ACCOUNT_PAGE_PATH");
                     page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.ACCOUNT_PAGE_PATH);
                 } else {
+                    request.setAttribute("page", "ADMIN_ACCOUNT_PAGE_PATH");
                     page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.ADMIN_ACCOUNT_PAGE_PATH);
                 }
 

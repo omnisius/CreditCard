@@ -10,26 +10,20 @@
 <body>
 <fmt:setLocale value="${local}" scope="session"/>
 <fmt:setBundle basename="com.bionic.bardakov.web.messages.messages"/>
-<ul>
-    <form align="right" name="localeForm" method="POST" action="com.bionic.bardakov.web.controller">
+    <form align="right" name="localeForm" method="POST" action="process">
         <input type = "hidden" name = "command" value = "local"/>
-        <input type="image" src="jsp/ramblingsoul9/images/ua.png" name="local" value="uk_UA" >
+        <input type="image" src="images/ua.png" name="local" value="uk_UA" >
         <input type = "hidden" name = "page" value = "${page}">
     </form>
-</ul>
-<ul>
-    <form align="right" name="localeForm" method="POST" action="com.bionic.bardakov.web.controller">
+    <form align="right" name="localeForm" method="POST" action="process">
         <input type = "hidden" name = "command" value = "local"/>
-        <input type="image" src="jsp/ramblingsoul9/images/us.png" name="local" value="en_US" >
+        <input type="image" src="images/us.png" name="local" value="en_US" >
         <input type = "hidden" name = "page" value = "${page}">
     </form>
-</ul>
-<ul>
-    <form align="right" name="localeForm" method="POST" action="com.bionic.bardakov.web.controller">
+    <form align="right" name="localeForm" method="POST" action="process">
         <input type = "hidden" name = "command" value = "local"/>
-        <input type="image" src="jsp/ramblingsoul9/images/ru.png" name="local" value="ru_RU" >
+        <input type="image" src="images/ru.png" name="local" value="ru_RU" >
         <input type = "hidden" name = "page" value = "${page}">
     </form>
-</ul>
 </body>
 </html>

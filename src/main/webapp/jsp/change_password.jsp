@@ -14,11 +14,11 @@
 </head>
 <fmt:setLocale value="${local}" scope="session"/>
 <fmt:setBundle basename="com.bionic.bardakov.web.messages.messages"/>
-<link href="jsp/ramblingsoul9/style.css" rel="stylesheet" type="text/css"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
 <body>
 <h3 style="color: white"><fmt:message key="CHANGE_PASSWORD"/></h3>
 <hr/>
-<form style="color: white" name="loginForm" method="POST" action="com.bionic.bardakov.web.controller">
+<form style="color: white" name="loginForm" method="POST" action="process">
     <input type="hidden" name="command" value="change password">
     <fmt:message key="PASSWORD"/>:<br/>
     <input type="password" name="password" value=""><br/>

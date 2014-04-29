@@ -1,10 +1,7 @@
-
 package com.bionic.bardakov.web.manager;
 
 import com.bionic.bardakov.web.config.ConfigurationManager;
 import org.apache.log4j.*;
-
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -17,7 +14,6 @@ import java.util.Queue;
  * Time: 21:55
  */
  public class ConnectionPool {
-
     Queue<Connection> connectionFreeQueue;
     Queue<Connection> connectionBusyQueue;
     String connectionUrl;

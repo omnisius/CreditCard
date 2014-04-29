@@ -12,14 +12,14 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
-<link href="jsp/ramblingsoul9/style.css" rel="stylesheet" type="text/css"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
 <fmt:setLocale value="${local}" scope="session"/>
 <fmt:setBundle basename="com.bionic.bardakov.web.messages.messages"/>
 <head><title>Unlock</title></head>
 <body>
 <strong style = "color:white" ><mytag:body><fmt:message key="SELECT_UNLOCK"/></mytag:body></strong>
 <br><br>
-<form style = "color:white" name="accountUnlockForm" method="POST" action="com.bionic.bardakov.web.controller" >
+<form style = "color:white" name="accountUnlockForm" method="POST" action="process" >
     <mytag:body size="${size}">
         <c:forEach var="userAccountNumber" items="${accountNum}">
            <input type="radio" name="userAccountNumber" checked value="${userAccountNumber}">${userAccountNumber}<br/>

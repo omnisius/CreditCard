@@ -22,8 +22,8 @@ To change this template use File | Settings | File Templates.
 <hr/>
 <errortag:error/>
 <hr/>
-<form action="com.bionic.bardakov.web.controller" >
-    <input type = "hidden" name = "command" value = "add new user"/>
+<form action="process" >
+    <input type = "hidden" name = "command" value = "registration"/>
     <input type="submit" value="<fmt:message key="REGISTRATION"/>"/>
 </form>
 </body>

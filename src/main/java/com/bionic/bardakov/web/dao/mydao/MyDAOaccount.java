@@ -114,7 +114,7 @@ public class MyDAOaccount implements IDAOaccount {
     public boolean checkStatusIsUnlock(long accountNumber) throws Exception {
         boolean ans = false;
         try {
-            Account[] findWhereStatusEquals = findWhereStatusEquals("unlock");
+            Account[] findWhereStatusEquals = findWhereStatusEquals(null);
             for (Account account : findWhereStatusEquals) {
                 return ans = (account != findWhereAccountNumberEquals(accountNumber));
             }
@@ -132,7 +132,7 @@ public class MyDAOaccount implements IDAOaccount {
     public boolean compareMoney(long accountNumber, float moneySum) throws Exception {
         Account account = findWhereAccountNumberEquals(accountNumber);
         long money = (long) account.getMoney();
-        return ( money >  moneySum);
+        return ( money >=  moneySum);
     }
 
     @Override

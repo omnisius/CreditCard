@@ -32,7 +32,7 @@ public class Controller extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
                                     throws ServletException, IOException {
-        String page = null;
+        String page;
         HttpSession session = request.getSession();
         String local = (String) session.getAttribute("local");
 

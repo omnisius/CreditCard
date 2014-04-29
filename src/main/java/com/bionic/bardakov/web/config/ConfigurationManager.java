@@ -33,7 +33,7 @@ public class ConfigurationManager {
     public static final String USER_ADD_PAGE_PATH = "USER_ADD_PAGE_PATH";
     public static final String PASSWORD_CHANGE_PAGE_PATH = "PASSWORD_CHANGE_PAGE_PATH";
     public static final String MAKE_PAYMENT_PAGE_PATH = "MAKE_PAYMENT_PAGE_PATH";
-    public static final String ACCOUNT_PAGE_PATH = "ACCOUNT_PAGE_PASS";
+    public static final String ACCOUNT_PAGE_PATH = "ACCOUNT_PAGE_PATH";
     public static final String ADMIN_ACCOUNT_PAGE_PATH = "ADMIN_ACCOUNT_PAGE_PATH";
     public static final String LOGOUT_PAGE_PATH = "LOGOUT_PAGE_PATH";
     public static final String CARD_ERROR_PAGE_PATH = "CARD_ERROR_PAGE_PATH";

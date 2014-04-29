@@ -9,44 +9,38 @@ To change this template use File | Settings | File Templates.
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<link href="jsp/ramblingsoul9/style.css" rel="stylesheet" type="text/css"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
 <html>
 <head>
-    <title>JSP Page</title>
+    <title>elcome</title>
 </head>
 <body>
 <fmt:setLocale value="${local}" scope="session"/>
-<ul>
-    <form name="localeForm" method="POST" action="com.bionic.bardakov.web.controller">
+    <form name="localeForm" method="POST" action="process">
         <input type="hidden" name="command" value="local"/>
-        <input type="image" src="jsp/ramblingsoul9/images/ua.png" name="local" value="uk_UA">
+        <input type="image" src="images/ua.png" name="local" value="uk_UA">
         <input type="hidden" name="page" value="INDEX_PAGE_PATH">
     </form>
-</ul>
-<ul>
-    <form name="localeForm" method="POST" action="com.bionic.bardakov.web.controller">
+    <form name="localeForm" method="POST" action="process">
         <input type="hidden" name="command" value="local"/>
-        <input type="image" src="jsp/ramblingsoul9/images/us.png" name="local" value="en_US">
+        <input type="image" src="images/us.png" name="local" value="en_US">
         <input type="hidden" name="page" value="INDEX_PAGE_PATH">
     </form>
-</ul>
-<ul>
-    <form name="localeForm" method="POST" action="com.bionic.bardakov.web.controller">
+    <form name="localeForm" method="POST" action="process">
         <input type="hidden" name="command" value="local"/>
-        <input type="image" src="jsp/ramblingsoul9/images/ru.png" name="local" value="ru_RU">
+        <input type="image" src="images/ru.png" name="local" value="ru_RU">
         <input type="hidden" name="page" value="INDEX_PAGE_PATH">
     </form>
-</ul>
 <fmt:setBundle basename="com.bionic.bardakov.web.messages.messages"/>
 <div id="wrap">
     <div id="header">
-        <h1><a href="#">CCWA.com </a><span class="desc"><fmt:message key="WELCOME_MESSAGE"/><br/></span></h1>
+        <h1><a href="#"><fmt:message key="WELCOME_MESSAGE"/> </a></h1>
 
         <div id="topnav">
             <ul>
-                <li><a href="com.bionic.bardakov.web.controller"><fmt:message key="LOGIN"/></a></li>
+                <li><a href="process"><fmt:message key="LOGIN"/></a></li>
                 <li>
-                    <form name="registrationForm" method="POST" action="com.bionic.bardakov.web.controller">
+                    <form name="registrationForm" method="POST" action="process">
                         <input type="hidden" name="command" value="registration"/>
                         <input type="submit" value="<fmt:message key="REGISTRATION"/>">
                     </form>

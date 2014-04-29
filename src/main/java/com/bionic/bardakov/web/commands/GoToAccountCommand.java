@@ -23,9 +23,7 @@ public class GoToAccountCommand implements ActionCommand {
     public String execute(HttpServletRequest request, HttpServletResponse response) {
         String page;
         HttpSession session = request.getSession();
-        Object local = session.getAttribute("local");
-        if ((local == null)) local = "ru_RU";
-        session.setAttribute("local", local);
+        String local = (String) session.getAttribute("local");
         try {
             //Move from cardNumer to accountNumber
             long cardNumber = Long.parseLong(request.getParameter(PARAM_NAME_CARD_NUMBER));
@@ -40,11 +38,13 @@ public class GoToAccountCommand implements ActionCommand {
             boolean isAdmin = MySQLDAOFactory.getMyDAOuser().isAdmin(login);
             if (!isAdmin) {
                 page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.ACCOUNT_PAGE_PATH);
+                request.setAttribute("page", "ACCOUNT_PAGE_PATH");
             } else {
                 page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.ADMIN_ACCOUNT_PAGE_PATH);
+                request.setAttribute("page", "ADMIN_ACCOUNT_PAGE_PATH");
             }
         } catch (Exception ex) {
-            request.setAttribute("errorMessage", MessageManager.getInstance((String) local).getProperty(MessageManager.GO_TO_ACCOUNT_ERROR_MESSAGE));
+            request.setAttribute("errorMessage", MessageManager.getInstance( local).getProperty(MessageManager.GO_TO_ACCOUNT_ERROR_MESSAGE));
             page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.ERROR_PAGE_PATH);
         }
         return page;

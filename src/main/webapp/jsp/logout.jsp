@@ -16,6 +16,6 @@
 <body style="background-color: #ec9d0d;">
 <h3><fmt:message key="GOODBYE"/></h3>
 <hr/>
-<a href="com.bionic.bardakov.web.controller"> <fmt:message key="TO_LOGIN"/></a>
+<a href="process"> <fmt:message key="TO_LOGIN"/></a>
 </body>
 </html>
